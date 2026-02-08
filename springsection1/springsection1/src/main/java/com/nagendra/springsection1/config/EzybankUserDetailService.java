@@ -3,6 +3,7 @@ package com.nagendra.springsection1.config;
 import com.nagendra.springsection1.model.Customer;
 import com.nagendra.springsection1.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -17,6 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EzybankUserDetailService implements UserDetailsService {
 
+    @Autowired
  private CustomerRepository customerRepository;
 
     /**
