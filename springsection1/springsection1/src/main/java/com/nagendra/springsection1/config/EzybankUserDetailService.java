@@ -28,7 +28,7 @@ public class EzybankUserDetailService implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-   Customer customer =customerRepository.findByEmail(username).orElseThrow(()->new
+    Customer customer =customerRepository.findByEmail(username).orElseThrow(()->new
                 UsernameNotFoundException("user details not found for user:"+username));
 
         List<GrantedAuthority>authorities =List.of( new SimpleGrantedAuthority(customer.getRole()));
