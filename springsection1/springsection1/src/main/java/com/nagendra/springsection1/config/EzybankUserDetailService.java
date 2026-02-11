@@ -18,8 +18,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EzybankUserDetailService implements UserDetailsService {
 
-    @Autowired
- private CustomerRepository customerRepository;
+@Autowired
+ private final CustomerRepository customerRepository;
 
     /**
      * @param username the username identifying the user whose data is required.
